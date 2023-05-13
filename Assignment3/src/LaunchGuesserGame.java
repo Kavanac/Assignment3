@@ -1,11 +1,21 @@
+//Enhanced the Guesser game in which user should only give the values between 1-10
+
 import java.util.*;
  class Guesser{
     int guessNum;
     int guessNum(){
+    	
         Scanner scan=new Scanner(System.in);
         System.out.println("Guesser please guess the number");
-        guessNum=scan.nextInt();
-        return guessNum;
+        
+        
+        
+        do {
+            System.out.println("Enter value bw 1-10");
+            guessNum = scan.nextInt();
+        } while(guessNum < 0 || guessNum > 10);
+
+         return guessNum;
     }
 }
  class Player{
@@ -13,8 +23,14 @@ import java.util.*;
     int guessNum(){
     Scanner scan=new Scanner(System.in);
         System.out.println("Player please guess the number");
-        guessNum=scan.nextInt();
-        return guessNum;
+
+        do {
+            System.out.println("Please enter value between 1-10");
+            guessNum = scan.nextInt();
+        } while(guessNum < 0 || guessNum > 10);
+
+         return guessNum;
+       
     }
 }
 
@@ -40,9 +56,11 @@ import java.util.*;
         if(numFromGueser==numFromPlayer1){
             if(numFromGueser==numFromPlayer2 && numFromGueser==numFromPlayer3){
                 System.out.println("All players won");
+                
             }
             else if(numFromGueser==numFromPlayer2){
-                System.out.println("Player 1 & player 2 won");
+                System.out.println("Player 1 & player 2 won ! ");
+                
             }
             else if(numFromGueser==numFromPlayer3){
                 System.out.println("Player 1 & 3 won");
