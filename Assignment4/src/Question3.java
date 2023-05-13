@@ -1,3 +1,4 @@
+//3. WAP to check if “2552” is palindrome or not
 import java.util.*;
 public class Question3 {
 

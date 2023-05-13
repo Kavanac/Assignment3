@@ -1,20 +1,15 @@
-// Java Program to count vowels, consonant, digits and
-// special character in a given string
+//4. WAP to count the number of consonants, vowels, special characters in a String.
+
 import java.io.*;
 
 public class Question4 {
 
-	// Function to count number of vowels, consonant,
-	// digitsand special character in a string.
 	static void countCharacterType(String str)
 	{
-		// Declare the variable vowels, consonant, digit
-		// and special characters
+		
 		int vowels = 0, consonant = 0, specialChar = 0,
 			digit = 0;
 	
-		// str.length() function to count number of
-		// character in given string.
 		for (int i = 0; i < str.length(); i++) {
 			
 			char ch = str.charAt(i);
@@ -22,7 +17,7 @@ public class Question4 {
 			if ( (ch >= 'a' && ch <= 'z') ||
 				(ch >= 'A' && ch <= 'Z') ) {
 	
-				// To handle upper case letters
+				
 				ch = Character.toLowerCase(ch);
 	
 				if (ch == 'a' || ch == 'e' || ch == 'i' ||
@@ -43,13 +38,13 @@ public class Question4 {
 		System.out.println("Special Character: " + specialChar);
 	}
 	
-	// Driver function.
+	
 	static public void main (String[] args)
 	{
-		String str = "geeks for geeks121";
+		String str = "Kavana26%99&";
 		
 		countCharacterType(str);
 	}
 }
 
-// This code is contributed by vt_m.
+
